@@ -1,0 +1,55 @@
+<div class="container text-center" style="height: 100vh;">
+
+    <div class="row justify-content-center align-items-center h-100">
+        <div class="col-md-4">
+            <form class="form-signin" method="post" action="/signin" autocomplete="off">
+                <img class="mb-4" src="/images/logo.png" alt="" width="280">
+
+                {{#if sucessoMsg}}
+                <div class="alert alert-success" role="alert">
+                    {{sucessoMsg}}
+                </div>
+                {{/if}}
+
+                {{#if erroMsg}}
+                <div class="alert alert-danger" role="alert">
+                    {{erroMsg}}
+                </div>
+                {{/if}}
+
+                <h1 class="h3 mb-3 font-weight-normal">Crie uma conta</h1>
+                <p class="small">Ao criar uma conta, você poderá realizar a comprar da sua chave de ativação e efetuar o download do sistema. </p>
+                <label for="" class="sr-only">Seu nome</label>
+
+                <input type="text" name="nome" id="inputNome" class="form-control form-control-lg mb-2" placeholder="Seu nome" required>
+
+                <label for="inputEmail" class="sr-only">Endereço de email</label>
+
+                <input type="email" id="inputEmail" name="email" class="form-control form-control-lg mb-2" placeholder="Seu email"
+                    required>
+
+                <label for="inputPassword" class="sr-only">Senha</label>
+
+                <input type="password" name="senha" id="inputPassword" class="form-control form-control-lg mb-4"
+                    placeholder="Crie uma senha" required>
+
+                    <div id="example-container" class="pb-4" data-sitekey="0x4AAAAAAAW6io-VAOtir98a"></div>
+                    <input type="hidden" name="token_captcha" class="token_captcha">
+
+                <button class="btn btn-lg btn-success btn-block" type="submit" id="btn-form">Cadastrar</button>
+
+                <p class="text-muted my-4">Já possui uma conta? <a href="/login"><strong>Faça login</strong></a></p>
+
+
+            </form>
+            <a href="/privacidade" target="_blank" class="font-weight-bold small"><i class="bi bi-box-arrow-up-right"></i> Nossa política de privacidade</a>
+        </div>
+
+         
+    </div>
+
+
+
+</div>
+
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback" defer></script>

@@ -1,0 +1,42 @@
+<div class="row">
+        <div class="col-md-5 mb-4">
+            <div class="card">
+                <h5 class="card-header">Chave de ativação <span class="badge badge-success">ATIVA</span></h5>
+                <div class="card-body">
+                    <div class="form-group d-flex">
+                        <input type="text" id="inputSerial" class="form-control form-control-lg w-75"
+                            value="{{user.serial.chave}}" readonly>
+                        <button class="btn btn-secondary btn-lg ml-2" onclick="copiarLink()">
+                            Copiar chave
+                        </button>
+                    </div>
+                    <p class="card-text">Sua chave de ativação é vitalícia, não expira nunca. <br>
+                        Copie e guarde sua chave em local seguro.
+                    </p>
+                    <a href="https://shpdvs.netlify.app/uploads/instalador_pdv.exe" class="btn btn-primary"><i
+                            class="bi bi-download"></i> Baixar instalador PDV</a>
+                    <a href="./painel/patch"
+                        class="btn btn-success my-2"><i class="bi bi-download"></i> Baixe seu pacote de ativação</a>
+                    <a href="/uploads/manual.pdf" class="btn btn-warning" target="_blank"><i class="bi bi-download"></i>
+                        Baixe o manual de instalação</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-7 mb-4">
+            <div class="card">
+                <h5 class="card-header">Tutorial de ativação do sistema <span class="badge badge-danger">Siga
+                        passo-a-passo</span></h5>
+                <div class="card-body">
+                    <iframe width="100%" height="315"
+                        src="https://www.youtube.com/embed/ok-MZgQyrcw?si=RXiFpavOPZ31IQCM" title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+
+                    <a href="https://www.youtube.com/playlist?list=PLKm8BoNYV7zlLr4MLSyJxvQ198izFHFCz"
+                        class="btn btn-primary">Mais tutoriais</a>
+                </div>
+            </div>
+        </div>
+    </div>

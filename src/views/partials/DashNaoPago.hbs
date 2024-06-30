@@ -1,0 +1,70 @@
+<div class="alert alert-info alert-dismissible fade show" role="alert">
+        <strong>Já efetuou a compra? </strong><br>
+        <button class="btn btn-success btn-sm" data-toggle="modal" data-target="#ModalRefresh"
+            onclick="realoadPage()">Clique aqui</button>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+
+    <div class="row">
+        <div class="col-md-5 mb-4 order-2 order-md-1">
+
+            
+            {{!-- <div class="card mb-4">
+                <h5 class="card-header">Quer testar antes de comprar?</h5>
+                <div class="card-body">
+                    <p class="card-text">Baixe o instalador e faça um teste sem compromisso <br>
+                    </p>
+                    <p>Usuário: <strong>adm</strong> | Senha: <strong>adm</strong></p>
+
+
+                     <a href="https://shpdvs.netlify.app/uploads/instalador_pdv.exe" class="btn btn-primary"><i
+                            class="bi bi-download"></i> Baixar instalador PDV</a>
+                            <div class="my-2"></div>
+                    <a href="https://www.youtube.com/playlist?list=PLKm8BoNYV7zlLr4MLSyJxvQ198izFHFCz" class="btn btn-warning" target="_blank"><i class="bi bi-play"></i>
+                        Tutoriais do sistema</a>
+
+                </div>
+            </div> --}}
+
+            <div class="card">
+                <h5 class="card-header">Chave de ativação <span class="badge badge-danger">NÃO POSSUI</span></h5>
+                <div class="card-body">
+                    <p class="card-text">A chave de ativação é vitalícia, não expira nunca. <br>
+                        Assim que você comprar a licença, sua chave serial será liberada.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-7 order-1 order-md-2">
+            <div class="jumbotron">
+                <h2 class="display-5">Olá, {{user.nome}}!</h2>
+                <p class="lead">Você ainda não adquiriu sua chave de ativação do PDV Store Master.</p>
+                <hr class="my-4">
+                <p class="mb-0 " style="font-size: 1.2em;"> <strong class="text-dark">Por apenas R${{preco}}</strong> você
+                    adquire sua licença
+                    vitalícia.
+                    <br>
+                    Pagamento único, sem mensalidade.
+                </p>
+
+                <br>
+
+                <div class="row">
+                    <div class="col-md-5 mb-4 align-self-center">
+                        <button class="btn btn-success btn-lg w-100" role="button" data-toggle="modal"
+                            data-target="#instrucaoCompra"><i class="bi bi-cart2"></i> Comprar licença</button>
+                    </div>
+
+                    <div class="col-md-7">
+                        <img src="/images/cartoes.png" alt="cartoes" class="img-fluid">
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>

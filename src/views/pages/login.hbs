@@ -1,0 +1,66 @@
+<div class="container text-center" style="height: 100vh;">
+
+    <div class="row justify-content-center align-items-center h-100">
+        <div class="col-md-4">
+            <form class="form-signin" method="post" action="/login" autocomplete="off">
+                <img class="mb-4" src="/images/logo.png" alt="" width="280">
+
+                {{#if erroMsg}}
+                <div class="alert alert-danger" role="alert">
+                    {{erroMsg}}
+                </div>
+                {{/if}}
+
+                <h1 class="h3 mb-3 font-weight-normal">Acesse sua conta</h1>
+
+                <div class="form-group">
+                    <label for="inputEmail" class="sr-only">Endereço de email</label>
+
+                    <input type="email" id="inputEmail" name="email" class="form-control form-control-lg mb-2"
+                        placeholder="Seu email" required>
+
+                </div>
+
+
+                <div class="form-group">
+                    <label for="inputPassword" class="sr-only">Senha</label>
+
+                    <input type="password" name="senha" id="inputPassword" class="form-control form-control-lg mb-4"
+                        placeholder="Crie uma senha" required>
+
+                </div>
+
+                <input type="hidden" name="ipUser" id="ipUser">
+
+                <div id="example-container" class="pb-4" data-sitekey="0x4AAAAAAAW6io-VAOtir98a"></div>
+                <input type="hidden" name="token_captcha" class="token_captcha">
+
+                <button class="btn btn-lg btn-success btn-block" id="btn-form" type="submit">Entrar</button>
+
+                <p class="text-muted my-4">Ainda não possui uma conta? <a href="/"><strong>Cadastre-se</strong></a></p>
+
+
+            </form>
+
+            <a href="/privacidade" target="_blank" class="font-weight-bold small"><i class="bi bi-box-arrow-up-right"></i>
+            Nossa política de privacidade</a>
+        </div>
+    </div>
+
+    <script>
+        const inputIp = document.querySelector("#ipUser");
+
+
+        let ipUser = ""
+
+        // Captura o IP
+        setTimeout(async () => {
+            await fetch("https://api.ipify.org?format=json").then(response => response.json()).then(res => {
+                inputIp.value = res.ip;
+            })
+        }, 100);
+    </script>
+
+</div>
+
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback" defer></script>

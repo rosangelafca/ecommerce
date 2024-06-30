@@ -1,0 +1,44 @@
+{{>_NavPainel}}
+
+<div class="container my-4">
+
+    <!-- Modais  -->
+    {{>ModalPagamento}}
+    {{>ModalRefresh}}
+
+    <!-- Lógica para exibição conforme status do usuário -->
+    {{#if pagamento}}
+
+    <!-- Dashboard Após pagamento -->
+    {{>DashPago}}
+
+    {{else}}
+
+    <!-- Dashboard Não pago -->
+    {{>DashNaoPago}}
+
+    {{/if}}
+
+    <!-- Links Políticas de Privacidade -->
+    {{>FooterPoliticas}}
+
+</div>
+
+<script>
+    function realoadPage() {
+        const countLoading = document.getElementById("countLoading");
+        let count = 20;
+
+        countLoading.innerHTML = count;
+
+        setInterval(() => {
+            if (count === 0) {
+                return window.location.reload();
+            }
+            countLoading.innerHTML = (count - 1);
+            count--;
+        }, 1000)
+    }
+</script>
+
+<script src="/js/main.js"></script>

@@ -1,0 +1,73 @@
+<!-- Modal Pagamento -->
+    <div class="modal fade" id="instrucaoCompra" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="TituloModalCentralizado">Instruções de compra</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Ao clicar em prosseguir, você será redirecionado para o ambiente seguro do Mercado Pago.</p>
+
+                    <div class="accordion" id="accordionExample">
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse"
+                                        data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Pagamentos via cartão de crédito
+                                    </button>
+                                </h5>
+                            </div>
+
+                            <div id="collapseOne" class="collapse hide" aria-labelledby="headingOne"
+                                data-parent="#accordionExample">
+                                <div class="card-body">
+                                    Quando terminar o pagamento, aguarde na página do Mercado Pago. Você será
+                                    automaticamente redirecionado de volta ao nosso site. Ao retornar, clique no botão
+                                    no topo da página e espere por cerca de 20 segundos. A página será atualizada
+                                    automaticamente, e você terá acesso à sua chave serial.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingTwo">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                        data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Pagamentos via PIX
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                data-parent="#accordionExample">
+                                <div class="card-body">
+                                    Após concluir o pagamento no Mercado Pago, se não for redirecionado automaticamente
+                                    para nosso painel, aguarde cerca de 20 segundos e acesse nosso site. Sua chave
+                                    serial estará pronta para uso.
+                                </div>
+                            </div>
+                        </div>
+
+                        <br>
+                    </div>
+
+                    <div class="text-center d-flex flex-column">
+                        <a href="https://www.mercadopago.com.br/privacidade" target="_blank"
+                            class="font-weight-bold small"><i class="bi bi-box-arrow-up-right"></i> Política de
+                            privacidade MercadoPago</a>
+                        <a href="/privacidade" target="_blank" class="font-weight-bold small"><i
+                                class="bi bi-box-arrow-up-right"></i> Nossa política de privacidade</a>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <a href="/painel/checkout/pay" class="btn btn-success">Prosseguir</a>
+                </div>
+            </div>
+        </div>
+    </div>
